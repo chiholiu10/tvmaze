@@ -5,6 +5,7 @@ import { getData } from '../../../actions/index';
 import { getEpisodeList } from '../../../actions/index';
 import { Button } from './Components/Button';
 import { Input } from './Components/Input';
+import { Header } from './Components/Header';
 
 export const SearchInput = () => {
     const dispatch = useDispatch();
@@ -43,7 +44,7 @@ export const SearchInput = () => {
 
     return (
         <section>
-            <h1>Powerpuff Girls</h1>
+            <Header/>
             <form 
                 onSubmit={e => {
                 e.preventDefault()

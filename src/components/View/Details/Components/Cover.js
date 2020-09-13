@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Cover = ({ image, altText }) => {
     return (
-        <div>
+        <figure>
             {image && <img src={image.original} alt={altText}/>}
-        </div>
+        </figure>
     )
 }

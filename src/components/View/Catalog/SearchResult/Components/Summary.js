@@ -6,9 +6,9 @@ export const Summary = ({ summaryText }) => {
     };
 
     return (
-        <div>
+        <article>
             <div dangerouslySetInnerHTML={ summaryMarkup() } />
-        </div>
+        </article>
     )
 }
 
