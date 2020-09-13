@@ -2,8 +2,7 @@ import { types } from '../actions/index';
 
 const initialState = {
     catalogInfo: [],
-    castList: [],
-    summeryIndex: null
+    episodeList: []
 }
 
 export const catalogData = (state = initialState, action) => {
@@ -12,6 +11,20 @@ export const catalogData = (state = initialState, action) => {
             return {
                 ...state,
                 catalogInfo: action.data
+            }
+        }
+
+        case types.GET_EPISODE: {
+            return {
+                ...state,
+                episodeList: action.list
+            }
+        }
+
+        case types.GET_INDEX: {
+            return {
+                ...state,
+                currentIndex: action.index
             }
         }
 
