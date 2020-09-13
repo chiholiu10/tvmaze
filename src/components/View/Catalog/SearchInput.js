@@ -2,22 +2,39 @@ import React from 'react';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { getData } from '../../../actions/index';
+import { getEpisodeList } from '../../../actions/index';
+import { Button } from './Components/Button';
+import { Input } from './Components/Input';
 
 export const SearchInput = () => {
     const dispatch = useDispatch();
     let input;
 
     const getInputValue = (value) => {
-        let url = `http://api.tvmaze.com/singlesearch/shows?q=${value}`;
-        passAPI(url);
+        let url = `http://api.tvmaze.com/singlesearch/shows?q=${value}&embed=episodes`;
+        tvData(url);
+    }
+
+    const episodeListData = (url) => {
+        axios(url)
+            .then(response => {
+                dispatch(getEpisodeList(response.data))
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
+    const getId = (id) => {
+        let url = `http://api.tvmaze.com/shows/${id}/episodes`;
+        episodeListData(url);
     }
     
-    const passAPI = (getUrl) => {
-        console.log(getUrl)
+    const tvData = (getUrl) => {
         axios(getUrl)
             .then(response => {
-                console.log(response)
                 dispatch(getData(response))
+                getId(response.data.id);
             })
             .catch(error => {
                 console.log(error)
@@ -25,8 +42,8 @@ export const SearchInput = () => {
     }
 
     return (
-        <div className='container'>
-            <h1>Keyword</h1>
+        <section>
+            <h1>Powerpuff Girls</h1>
             <form 
                 onSubmit={e => {
                 e.preventDefault()
@@ -34,17 +51,10 @@ export const SearchInput = () => {
 
                 getInputValue(input.value);
             }}>
-
-                <input 
-                    ref={node => (input = node)}
-                    placeholder='Search catalog'
-                    aria-label='search-input' 
-                />
-                <button type='submit'>
-                    Search
-                </button>
+                <Input inputRef={node => (input = node)}/>
+                <Button/>
             </form>
-        </div>
+        </section>
     )
 }
 
