@@ -1,18 +1,16 @@
 import * as React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import { CatalogPage } from './components/CatalogPage/CatalogPage';
-// import EpisodePage from './components/EpisodePage/EpisodePage';
-// import "./styles.scss";
+import { DetailPage } from './components/DetailPage/DetailPage';
 
-export default function App() {
+export const App = () => {
   return (
     <div className="App">
-        <Switch>
-          <Route exact path="/" render={() => <CatalogPage />} />
-          {/* <Route path="/EpisodePage" render={() => <EpisodePage />} /> */}
-        </Switch>
-
+      <Switch>
+        <Route exact path="/" render={() => <CatalogPage />} />
+        <Route path="/DetailPage" render={() => <DetailPage />} />
+        <Route path="*" render={() => <Redirect to={{path: "/"}} />}/>
+      </Switch>
     </div>
   );
 }
-
