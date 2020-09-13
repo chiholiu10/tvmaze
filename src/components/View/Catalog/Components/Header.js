@@ -1,9 +1,11 @@
 import React from 'react';
 
-export const Title = ({ title }) => {
+export const Header = () => {
     return (
         <header>
-            <h1>{title}</h1>
+            <h1>Search TV Serie</h1>
         </header>
     )
 }
+
+
