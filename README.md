@@ -43,7 +43,7 @@ In the project directory, you can run:
 - babel-eslint 10.1.0
 - enzyme 3.11.0
 - enzyme-adapter-react-16 1.15.4
-- eslint ^7.9.0,
+- eslint ^6.6.0,
 - eslint-config-airbnb ^18.2.0
 - eslint-config-prettier ^6.11.0
 - eslint-plugin-import ^2.22.0
