@@ -3,20 +3,22 @@
 
 body {
     .form {
-        display: inline-flex;
+        display: flex;
+        flex-wrap: wrap; 
         width: 100%;
         height: 40px;
+        
     }
     .search-input {
         font-size: 14px;
-        padding: 0 15px;
+        padding: 15px;
+        margin-right: 10px;
     }
     .search-button {
         border-radius: 0;
         border: none;
-        padding: 0 15px;
-        margin-left: 10px;
         background-color: $red;
+        padding: 15px;
         color: $white;
         @media screen and (min-width: $desktop) {
             &:hover {
