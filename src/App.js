@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./App.scss";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { CatalogPage } from './components/CatalogPage/CatalogPage';
 import { DetailPage } from './components/DetailPage/DetailPage';
