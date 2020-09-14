@@ -12,15 +12,15 @@ export const Details = ({ episodeData, episodeIndex }) => {
 	const contentCheck = episodeData.length;
 	const currentEpisode = episodeData[episodeIndex];
 
+	const previousPage = () => {
+		history.goBack();
+	};
+
 	if(currentEpisode === undefined || contentCheck === 0) {
 		return (
 			<Redirect to='/'/>
 		);
 	}
-
-	const previousPage = () => {
-		history.goBack();
-	};
     
 	return (
 		<section>
