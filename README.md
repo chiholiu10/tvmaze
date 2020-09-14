@@ -5,7 +5,8 @@
 
 ### Built with
 
-- [React Document](https://reactjs.org/docs/getting-started.html) 
+- [React](https://reactjs.org/docs/getting-started.html) 
+- [Redux](https://redux.js.org/)
 - [Eslint](https://eslint.org/) 
 - [Node-sass](https://github.com/sass/node-sass) 
 - [Jest](https://jestjs.io/)
