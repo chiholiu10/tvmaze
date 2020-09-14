@@ -6,7 +6,7 @@ import { Button } from './Button';
 import { Provider } from "react-redux";
 import { store } from "../../../../../Store";
 
-test('Check header exists', () => {
+test('Check button exists', () => {
 	const button = shallow(
 		<Provider store={store}>
 			<Router history={history}>

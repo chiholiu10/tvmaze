@@ -4,7 +4,7 @@ import { Summary } from './Summary';
 import { Provider } from "react-redux";
 import { store } from "../../../../../Store";
 
-test('Check header exists', () => {
+test('Check summary exists', () => {
 	const summary = shallow(
 		<Provider store={store}>
 			<Summary summaryText="test"/>

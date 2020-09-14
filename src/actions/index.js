@@ -4,11 +4,10 @@ export const types = {
 	GET_INDEX: 'GET_INDEX'
 };
 
-export const getData = (data, id) => {
+export const getData = (data) => {
 	return {
 		type: types.GET_DATA,
-		data,
-		id
+		data
 	};
 };
 

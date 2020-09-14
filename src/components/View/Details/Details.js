@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import history from '../../../history';
+import { Redirect } from "react-router-dom";
 import { connect } from 'react-redux';
 import { Header } from './Components/Header';
 import { Cover } from './Components/Cover';
@@ -11,13 +12,15 @@ export const Details = ({ episodeData, episodeIndex }) => {
 	const contentCheck = episodeData.length;
 	const currentEpisode = episodeData[episodeIndex];
 
+	if(currentEpisode === undefined || contentCheck === 0) {
+		return (
+			<Redirect to='/'/>
+		);
+	}
+
 	const previousPage = () => {
 		history.goBack();
 	};
-
-	if(contentCheck === 0) {
-		previousPage();
-	}
     
 	return (
 		<section>
