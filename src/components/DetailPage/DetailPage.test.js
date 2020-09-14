@@ -8,12 +8,12 @@ import { store } from "../../Store";
 
 test('DetailPage running', () => {
 	const detailpageComponent = shallow(
-        <Provider store={store}>
-            <Router history={history}>
-                <DetailPage/>
-            </Router>
-        </Provider>
-    );
+		<Provider store={store}>
+			<Router history={history}>
+				<DetailPage/>
+			</Router>
+		</Provider>
+	);
 
 	expect(detailpageComponent).toHaveLength(1);
 });

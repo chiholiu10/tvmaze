@@ -5,32 +5,32 @@ import { useDispatch } from 'react-redux';
 import { getIndex } from '../../../../../actions/index';
 
 export const EpisodeList = ({ 
-    episodeList
+	episodeList
 }) => {
-    const dispatch = useDispatch();
-    if(episodeList === undefined) return; 
+	const dispatch = useDispatch();
+	if(episodeList === undefined) return; 
 
-    return (
-        <ul>
-            {episodeList && episodeList.map((episode, index) => {
-                return (
-                    <Link key={episode.id}
-                        className='button-link'
-                        to={`/DetailPage/${episode.id}`}
-                        onClick={() => dispatch(getIndex(index))}
-                        >
-                        <button>{episode.name}</button>
-                    </Link>
-                )
-            })}
-        </ul>
-    )
-}
+	return (
+		<ul>
+			{episodeList && episodeList.map((episode, index) => {
+				return (
+					<Link key={episode.id}
+						className='button-link'
+						to={`/DetailPage/${episode.id}`}
+						onClick={() => dispatch(getIndex(index))}
+					>
+						<button>{episode.name}</button>
+					</Link>
+				);
+			})}
+		</ul>
+	);
+};
 
 const mapStateToProps = (state) => {
-    return {
-        episode: state.catalogData.catalogInfo.episodeList || []
-    }
-}
+	return {
+		episode: state.catalogData.catalogInfo.episodeList || []
+	};
+};
 
 export default connect(mapStateToProps)(EpisodeList);
