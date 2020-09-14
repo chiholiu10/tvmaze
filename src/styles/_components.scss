@@ -18,6 +18,11 @@ body {
         margin-left: 10px;
         background-color: $red;
         color: $white;
+        @media screen and (min-width: $desktop) {
+            &:hover {
+                cursor: pointer;
+            }
+        } 
     }
     .search-input,
     .search-button {
@@ -52,5 +57,13 @@ body {
     }
     .button-detail {
         padding: 15px 0;
+        &:focus {
+            outline: 0;
+        }
+        @media screen and (min-width: $desktop) {
+            &:hover {
+                cursor: pointer;
+            }
+        } 
     }
 }
