@@ -5,10 +5,10 @@ import { Provider } from "react-redux";
 import { store } from "../../../../../Store";
 
 test('Check cover exists', () => {
-    const cover = mount(
-        <Provider store={store}>
-            <Cover/>
-        </Provider>
-    );
-    expect(cover).toHaveLength(1);
+	const cover = mount(
+		<Provider store={store}>
+			<Cover/>
+		</Provider>
+	);
+	expect(cover).toHaveLength(1);
 });

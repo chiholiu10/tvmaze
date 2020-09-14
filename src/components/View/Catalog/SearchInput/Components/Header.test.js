@@ -7,12 +7,12 @@ import { Provider } from "react-redux";
 import { store } from "../../../../../Store";
 
 test('Check header exists', () => {
-    const header = shallow(
-        <Provider store={store}>
-            <Router history={history}>
-                <Header/>
-            </Router>
-        </Provider>
-    );
-    expect(header).toHaveLength(1);
+	const header = shallow(
+		<Provider store={store}>
+			<Router history={history}>
+				<Header/>
+			</Router>
+		</Provider>
+	);
+	expect(header).toHaveLength(1);
 });

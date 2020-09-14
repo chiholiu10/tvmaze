@@ -8,53 +8,53 @@ import { Input } from './Components/Input';
 import { Header } from './Components/Header';
 
 export const SearchInput = () => {
-    const dispatch = useDispatch();
-    let input;
+	const dispatch = useDispatch();
+	let input;
 
-    const getInputValue = (value) => {
-        let url = `http://api.tvmaze.com/singlesearch/shows?q=${value}&embed=episodes`;
-        tvData(url);
-    }
+	const getInputValue = (value) => {
+		let url = `http://api.tvmaze.com/singlesearch/shows?q=${value}&embed=episodes`;
+		tvData(url);
+	};
 
-    const episodeListData = (url) => {
-        axios(url)
-            .then(response => {
-                dispatch(getEpisodeList(response.data))
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }
+	const episodeListData = (url) => {
+		axios(url)
+			.then(response => {
+				dispatch(getEpisodeList(response.data));
+			})
+			.catch(error => {
+				console.log(error);
+			});
+	};
 
-    const getId = (id) => {
-        let url = `http://api.tvmaze.com/shows/${id}/episodes`;
-        episodeListData(url);
-    }
+	const getId = (id) => {
+		let url = `http://api.tvmaze.com/shows/${id}/episodes`;
+		episodeListData(url);
+	};
     
-    const tvData = (getUrl) => {
-        axios(getUrl)
-            .then(response => {
-                dispatch(getData(response))
-                getId(response.data.id);
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }
+	const tvData = (getUrl) => {
+		axios(getUrl)
+			.then(response => {
+				dispatch(getData(response));
+				getId(response.data.id);
+			})
+			.catch(error => {
+				console.log(error);
+			});
+	};
 
-    return (
-        <section>
-            <Header/>
-            <form 
-                onSubmit={e => {
-                e.preventDefault()
-                if(!input.value.trim()) return;
+	return (
+		<section>
+			<Header/>
+			<form 
+				onSubmit={e => {
+					e.preventDefault();
+					if(!input.value.trim()) return;
 
-                getInputValue(input.value);
-            }}>
-                <Input inputRef={node => (input = node)}/>
-                <Button/>
-            </form>
-        </section>
-    )
-}
+					getInputValue(input.value);
+				}}>
+				<Input inputRef={node => (input = node)}/>
+				<Button/>
+			</form>
+		</section>
+	);
+};
