@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Title } from './Components/Title';
+import { Header } from './Components/Header';
 import { EpisodeList } from './Components/EpisodeList';
 import { Cover } from './Components/Cover';
 import { Summary } from './Components/Summary';
@@ -13,7 +13,7 @@ export const SearchResult = ({
 
     return (
         <section>
-            <Title title={info.name}/>
+            <Header title={info.name}/>
             <Summary summaryText={info.summary}/>
             <Cover image={info.image} altText={info.name}/>
             <EpisodeList episodeList={episode}/>
