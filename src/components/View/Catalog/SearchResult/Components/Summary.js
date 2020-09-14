@@ -7,7 +7,7 @@ export const Summary = ({ summaryText }) => {
 	};
 
 	return (
-		<article>
+		<article className="article two-columns">
 			<div dangerouslySetInnerHTML={ summaryMarkup() } />
 		</article>
 	);

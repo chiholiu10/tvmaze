@@ -45,7 +45,7 @@ export const SearchInput = () => {
 	return (
 		<section>
 			<Header/>
-			<form 
+			<form className="form"
 				onSubmit={e => {
 					e.preventDefault();
 					if(!input.value.trim()) return;

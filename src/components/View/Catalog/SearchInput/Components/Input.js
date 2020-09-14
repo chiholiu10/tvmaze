@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const Input = ({ inputRef }) => {
 	return (
-		<input 
+		<input className="search-input"
 			ref={inputRef}
 			placeholder='Search catalog'
 			aria-label='search-input' 
@@ -12,7 +12,7 @@ export const Input = ({ inputRef }) => {
 };
 
 Input.propTypes = {
-	inputRef: PropTypes.string
+	inputRef: PropTypes.any
 };
 
 
