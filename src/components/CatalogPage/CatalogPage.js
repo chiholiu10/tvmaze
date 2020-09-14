@@ -1,6 +1,6 @@
 import React from 'react';
-import SearchInput from '../View/Catalog/SearchInput';
 import SearchResult from '../View/Catalog/SearchResult/SearchResult';
+import { SearchInput } from '../View/Catalog/SearchInput/SearchInput';
 
 export const CatalogPage = () => {
     return (

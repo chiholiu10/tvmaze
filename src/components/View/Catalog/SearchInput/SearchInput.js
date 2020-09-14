@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
-import { getData } from '../../../actions/index';
-import { getEpisodeList } from '../../../actions/index';
+import { getData } from '../../../../actions/index';
+import { getEpisodeList } from '../../../../actions/index';
 import { Button } from './Components/Button';
 import { Input } from './Components/Input';
 import { Header } from './Components/Header';
@@ -58,5 +58,3 @@ export const SearchInput = () => {
         </section>
     )
 }
-
-export default SearchInput;
