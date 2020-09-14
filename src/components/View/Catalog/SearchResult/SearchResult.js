@@ -10,13 +10,15 @@ export const SearchResult = ({
 	info, 
 	episode 
 }) => {
-	if(info == undefined) return false;
+	if(info === undefined) return false;
 
 	return (
 		<section>
 			<Header title={info.name}/>
-			<Summary summaryText={info.summary}/>
-			<Cover image={info.image} altText={info.name}/>
+			<div className="mobile-breakpoint">
+				<Summary summaryText={info.summary}/>
+				<Cover image={info.image} altText={info.name}/>
+			</div>
 			<EpisodeList episodeList={episode}/>
 		</section>
 	);

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export const Cover = ({ image, altText }) => {
 	return (
 		<figure>
-			{image && <img src={image.original} alt={altText}/>}
+			{image && <img src={image.original} alt={altText} className="image-detail"/>}
 		</figure>
 	);
 };

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const Button = ({ clickPage }) => {
 	return (
-		<button onClick={clickPage}>
+		<button onClick={clickPage} className="button button-detail fonts">
 			Back to Catalog
 		</button>
 	);

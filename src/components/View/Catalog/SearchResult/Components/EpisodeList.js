@@ -15,13 +15,15 @@ export const EpisodeList = ({
 		<ul>
 			{episodeList && episodeList.map((episode, index) => {
 				return (
-					<Link key={episode.id}
-						className='button-link'
-						to={`/DetailPage/${episode.id}`}
-						onClick={() => dispatch(getIndex(index))}
-					>
-						<button>{episode.name}</button>
-					</Link>
+					<li className="button fonts" key={episode.id}>
+						<Link key={episode.id}
+							className='button-link'
+							to={`/DetailPage/${episode.id}`}
+							onClick={() => dispatch(getIndex(index))}
+						>
+							{episode.name}
+						</Link>
+					</li>
 				);
 			})}
 		</ul>
