@@ -4,7 +4,7 @@ import { EpisodeList } from './EpisodeList';
 import { Provider } from "react-redux";
 import { store } from "../../../../../Store";
 
-test('Check header exists', () => {
+test('Check episodeList exists', () => {
 	const header = shallow(
 		<Provider store={store}>
 			<EpisodeList list="test"/>
