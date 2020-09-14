@@ -1,7 +1,7 @@
 ## How to get this on my local machine
 
 ### Clone
-- Clone this repo to your local machine using `https://github.com/Sytac-DevCase/React-chiholiu.git`
+- Clone this repo to your local machine using `https://github.com/chiholiu/tvmaze.git`
 
 ### Built with
 
