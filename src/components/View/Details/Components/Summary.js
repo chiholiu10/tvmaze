@@ -1,10 +1,12 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 export const Summary = ({ summaryText }) => {
-	console.log(summaryText);
+
 	const summaryMarkup = () => {
 		return { __html: summaryText };
 	};
+
 	return (
 		<article>
 			<div dangerouslySetInnerHTML={ summaryMarkup() } />
@@ -12,5 +14,7 @@ export const Summary = ({ summaryText }) => {
 	);
 };
 
-
+Summary.propTypes = {
+	summaryText: PropTypes.string
+};
      

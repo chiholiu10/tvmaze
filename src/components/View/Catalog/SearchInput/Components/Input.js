@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 export const Input = ({ inputRef }) => {
 	return (
@@ -8,6 +9,10 @@ export const Input = ({ inputRef }) => {
 			aria-label='search-input' 
 		/>
 	);
+};
+
+Input.propTypes = {
+	inputRef: PropTypes.string
 };
 
 
