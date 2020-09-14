@@ -7,11 +7,12 @@ import history from "./history";
 import { shallow } from 'enzyme'
 
 test('Router exists', () => {
-  shallow(
+  const appComponent = shallow(
     <Provider store={store}>
       <Router history={history}>
         <App/>
       </Router>
     </Provider>
   );
+  expect(appComponent).toHaveLength(1);
 });
