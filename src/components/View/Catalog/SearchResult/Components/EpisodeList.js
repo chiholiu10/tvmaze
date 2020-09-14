@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -8,7 +9,7 @@ export const EpisodeList = ({
 	episodeList
 }) => {
 	const dispatch = useDispatch();
-	if(episodeList === undefined) return; 
+	if(episodeList === undefined) return false; 
 
 	return (
 		<ul>
@@ -33,4 +34,8 @@ const mapStateToProps = (state) => {
 	};
 };
 
+EpisodeList.propTypes = {
+	episodeList: PropTypes.any
+};
+     
 export default connect(mapStateToProps)(EpisodeList);

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 export const Cover = ({ image, altText }) => {
 	return (
@@ -6,4 +7,9 @@ export const Cover = ({ image, altText }) => {
 			{image && <img src={image.original} alt={altText}/>}
 		</figure>
 	);
+};
+
+Cover.propTypes = {
+	image: PropTypes.any,
+	altText: PropTypes.string,
 };

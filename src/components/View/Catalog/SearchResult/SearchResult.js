@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";  
 import { connect } from 'react-redux';
 import { Header } from './Components/Header';
 import { EpisodeList } from './Components/EpisodeList';
@@ -9,7 +10,7 @@ export const SearchResult = ({
 	info, 
 	episode 
 }) => {
-	if(info === undefined) return;
+	if(info == undefined) return false;
 
 	return (
 		<section>
@@ -28,4 +29,9 @@ const mapStateToProps = (state) => {
 	};
 };
 
+SearchResult.propTypes = {
+	info: PropTypes.any,
+	episode: PropTypes.any
+};
+     
 export default connect(mapStateToProps)(SearchResult);

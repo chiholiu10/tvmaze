@@ -1,6 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import PropTypes from "prop-types";
 import history from '../../../history';
+import { connect } from 'react-redux';
 import { Header } from './Components/Header';
 import { Cover } from './Components/Cover';
 import { Summary } from './Components/Summary';
@@ -33,6 +34,11 @@ const mapStateToProps = (state) => {
 		episodeData: state.catalogData.episodeList,
 		episodeIndex: state.catalogData.currentIndex
 	};
+};
+
+Details.propTypes = {
+	episodeData: PropTypes.any, 
+	episodeIndex: PropTypes.number
 };
 
 export default connect(mapStateToProps)(Details);
