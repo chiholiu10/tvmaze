@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import history from "../../../../../history";
-import { Router } from 'react-router-dom';
-import { mount } from 'enzyme';
-import { Input } from './Input';
+import { Router } from "react-router-dom";
+import { mount } from "enzyme";
+import { Input } from "./Input";
 import { Provider } from "react-redux";
 import { store } from "../../../../../Store";
 
-test('Check input exists and check if value is being passed', () => {
+test("Check input exists and check if value is being passed", () => {
 	const onSearchMock = jest.fn(() => true);
 	const wrap = mount(
 		<Provider store={store}>
@@ -15,7 +15,7 @@ test('Check input exists and check if value is being passed', () => {
 			</Router>
 		</Provider>
 	);
-	wrap.find('input').simulate('change');
+	wrap.find("input").simulate("change");
 	expect(onSearchMock()).toBe(true);
-	expect(wrap.find('input')).toHaveLength(1);
+	expect(wrap.find("input")).toHaveLength(1);
 });
