@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactMarkdown from 'react-markdown';
+import React from "react";
+import ReactMarkdown from "react-markdown";
 import PropTypes from "prop-types";
 
 export const Header = ({ episodeTitle }) => {

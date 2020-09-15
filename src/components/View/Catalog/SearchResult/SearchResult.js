@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";  
-import { connect } from 'react-redux';
-import { Header } from './Components/Header';
-import { EpisodeList } from './Components/EpisodeList';
-import { Cover } from './Components/Cover';
-import { Summary } from './Components/Summary';
+import { connect } from "react-redux";
+import { Header } from "./Components/Header";
+import { EpisodeList } from "./Components/EpisodeList";
+import { Cover } from "./Components/Cover";
+import { Summary } from "./Components/Summary";
 
 export const SearchResult = ({ 
 	info, 

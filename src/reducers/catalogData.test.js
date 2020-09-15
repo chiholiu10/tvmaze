@@ -1,25 +1,25 @@
-import { catalogData } from './catalogData';
-import { types } from '../actions/index';
-import { fixedApi } from '../data/mockdata';
+import { catalogData } from "./catalogData";
+import { types } from "../actions/index";
+import { fixedApi } from "../data/mockdata";
 
-test('return reducer default values', () => {
+test("return reducer default values", () => {
 	expect(catalogData(undefined, {})).toEqual({
 		catalogInfo: [],
 		episodeList: []
 	});
 });
 
-test('test get data reducer', () => {
+test("test get data reducer", () => {
 	const action = {
 		type: types.GET_DATA,
-		data: 'test'
+		data: "test"
 	};
 	expect(catalogData({}, action)).toEqual({
-		catalogInfo: 'test'
+		catalogInfo: "test"
 	});
 });
 
-test('test get data reducer', () => {
+test("test get data reducer", () => {
 	const action = {
 		type: types.GET_EPISODE,
 		list: fixedApi.fixedApi
@@ -29,7 +29,7 @@ test('test get data reducer', () => {
 	});
 });
 
-test('test get index reducer', () => {
+test("test get index reducer", () => {
 	const action = {
 		type: types.GET_INDEX,
 		index: 1

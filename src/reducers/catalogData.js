@@ -1,4 +1,4 @@
-import { types } from '../actions/index';
+import { types } from "../actions/index";
 
 const initialState = {
 	catalogInfo: [],

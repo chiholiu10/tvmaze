@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { getIndex } from '../../../../../actions/index';
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getIndex } from "../../../../../actions/index";
 
 export const EpisodeList = ({ 
 	episodeList
@@ -17,7 +17,7 @@ export const EpisodeList = ({
 				return (
 					<li className="button fonts" key={episode.id}>
 						<Link key={episode.id}
-							className='button-link'
+							className="button-link"
 							to={`/DetailPage/${episode.id}`}
 							onClick={() => dispatch(getIndex(index))}
 						>
