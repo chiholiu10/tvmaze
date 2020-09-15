@@ -1,10 +1,10 @@
 import React from 'react';
-import history from "../../history";
+import history from '../../history';
 import { DetailPage } from './DetailPage';
 import { Router } from 'react-router-dom';
-import { Provider } from "react-redux";
+import { Provider } from 'react-redux';
 import { shallow } from 'enzyme';
-import { store } from "../../Store";
+import { store } from '../../Store';
 
 test('DetailPage running', () => {
 	const detailpageComponent = shallow(

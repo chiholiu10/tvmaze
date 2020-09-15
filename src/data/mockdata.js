@@ -11,6 +11,6 @@ export const fixedApi = [{
 	"number": 1,
 	"runtime": 11,
 	"season": 1,
-	"summary": "<p>Bubbles wins two tickets to a concert and has to pick between Blossom and Buttercup to go with her. Meanwhile, the Mayor"s plane goes down over Monster Island and it"s up to the girls to rescue him.</p>",
+	"summary": '<p>Bubbles wins two tickets to a concert and has to pick between Blossom and Buttercup to go with her. Meanwhile, the Mayor"s plane goes down over Monster Island and it"s up to the girls to rescue him.</p>',
 	"url": "http://www.tvmaze.com/episodes/657308/the-powerpuff-girls-1x01-escape-from-monster-island"
 }];
